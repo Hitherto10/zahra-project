@@ -1,28 +1,242 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@font-face {
+  font-family: "MergeBlack";
+  src: url("assets/MergeBlackW00Regular/MergeBlackW00Regular.woff") format("woff"),
+       url("assets/MergeBlackW00Regular/MergeBlackW00Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "CarosSoftHeavy";
+  src: url("assets/CarosSoftHeavy/CarosSoftHeavy.woff") format("woff"),
+  url("assets/CarosSoftHeavy/CarosSoftHeavy.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/Montserrat/Montserrat-VariableFont_wght.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: #112540;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  color: red;
+span {
+  font-size: 1.2em;
 }
+
+.navbar {
+  padding: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.navLinks a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: "CarosSoftHeavy", serif;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #ccc;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #112540;
+  z-index: 1000;
+}
+
+.headingTitle {
+  font-family: "MergeBlack", serif;
+  color: white;
+  font-size: 25px;
+  padding: 0 30px 0 0;
+}
+
+.menu_button {
+  background: none;
+  border: none;
+  display: none;
+}
+
+.menu_button img{
+  height: 30px;
+}
+
+ /*Mobile styles*/
+@media (max-width: 833px) {
+  .menu_button {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .headingTitle {
+    margin-bottom: 10px;
+  }
+}
+
+
+.huddleContainer{
+  background: white;
+  height: 150px;
+  width: 100%;
+  margin-top: 100px;
+  padding: 10px;
+  border-bottom-right-radius: 100% 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.huddleTitle{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "CarosSoftHeavy", serif;
+  /*font-size: 4.5rem;*/
+}
+
+.huddleTitle span{
+  width: auto;
+  font-size: 5rem;
+}
+
+.huddleTitle img{
+  height: 70px;
+  width: 65px;
+}
+
+.welcomeSection {
+  padding: 30px;
+}
+
+.welcomeTitle {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: "MergeBlack", serif;
+  margin-bottom: 20px;
+}
+
+.welcomeBody{
+  margin: 0 auto;
+}
+
+.welcomeBriefsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.welcomeBriefs1,
+.welcomeBriefs2 {
+  box-sizing: border-box;
+  padding: 10px;
+  color: yellow;
+  font-family: "Montserrat", serif;
+}
+
+.welcomeBriefsTexts{
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;  /* THIS IS WHAT MAKES THE TEXT SIT INBETWEENN THE DIV*/
+}
+
+.welcomeBriefButton{
+  grid-column: 1 / 2;
+  display: flex;
+  /*justify-content: left;*/
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.learnMoreButton{
+  font-family: "Montserrat", serif;
+  color: white;
+  height: 40px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.learnMoreButton:after {
+  content: '';
+  background: url("../public/rightArrow.png");
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
