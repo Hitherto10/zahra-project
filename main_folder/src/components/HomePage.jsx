@@ -27,6 +27,11 @@ function HomePage() {
                                     Learn how adversity became our teacher, compassion our compass, and community our
                                     anchor.
                                 </p>
+                                <div className="welcomeBriefButton">
+                                    <button className="learnMoreButton">
+                                        LEARN MORE
+                                    </button>
+                                </div>
                             </div>
 
                             <div className="welcomeBriefs2">
@@ -37,16 +42,21 @@ function HomePage() {
                                     our unwavering mission to make a meaningful and lasting difference in the lives of
                                     those we support.
                                 </p>
+                                <div className="welcomeBriefButton">
+                                    <button className="learnMoreButton">
+                                        LEARN MORE
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
 
                         {/* ⬇ MOVE THIS DIV INSIDE THE GRID */}
-                        <div className="welcomeBriefButton">
-                            <button className="learnMoreButton">
-                                LEARN MORE
-                            </button>
-                        </div>
+                        {/*<div className="welcomeBriefButton">*/}
+                        {/*    <button className="learnMoreButton">*/}
+                        {/*        LEARN MORE*/}
+                        {/*    </button>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>
