@@ -65,7 +65,8 @@ span {
 }
 
 .navLinks a:hover {
-  color: #ccc;
+  color: yellow;
+  /*color: #ccc;*/
 }
 
 .header {
@@ -202,7 +203,8 @@ span {
 .welcomeBriefs2 {
   box-sizing: border-box;
   padding: 10px;
-  color: yellow;
+  color: white;
+  /*color: white;*/
   font-family: "Montserrat", serif;
 }
 
@@ -225,7 +227,7 @@ span {
 
 .learnMoreButton{
   font-family: "Montserrat", serif;
-  color: white;
+  color: yellow;
   height: 40px;
   width: fit-content;
   display: flex;
