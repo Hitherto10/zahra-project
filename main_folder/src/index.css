@@ -46,6 +46,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   /*flex-wrap: wrap;*/
 
 }
@@ -57,7 +58,8 @@ span {
 }
 
 .navLinks a {
-  color: white;
+  /*color: rgb(194, 194, 109);*/
+  color: orange;
   font-size: 15px;
   text-decoration: none;
   font-family: "CarosSoftHeavy", serif;
@@ -79,31 +81,38 @@ span {
 
 .headingTitle {
   font-family: "MergeBlack", serif;
-  color: white;
+  /*color: rgb(194, 194, 109);*/
+  color: orange;
   font-size: 25px;
   font-weight: lighter;
 }
 
 .menu_button {
   background: none;
-  position: fixed;
-  top: 30px;
   border: none;
-  right: 20px;
   z-index: 5000;
   cursor: pointer;
   display: none;
+  padding-left: 15px;
+}
+
+.overlayCloseButton{
+  top: 30px;
+  position: fixed;
+  right: 20px;
 }
 
 .menu_button img{
   height: 30px;
   margin-bottom: 5px;
-  filter: brightness(0) invert(1);
+  /*filter: brightness(0) invert(1);*/
+  filter: brightness(0) saturate(100%) invert(54%) sepia(94%) saturate(2140%) hue-rotate(3deg) brightness(102%) contrast(101%);
+
 }
 
 
  /*Mobile styles*/
-@media (max-width: 833px) {
+@media (max-width: 835px) {
   .menu_button {
     display: block;
   }
@@ -129,19 +138,6 @@ span {
     margin-bottom: 10px;
   }
 }
-
-/*Larger Screens*/
-@media (min-width: 834px) {
-  .navLinks {
-    display: flex !important;
-  }
-
-  .menu_button {
-    display: none;
-  }
-}
-
-
 
 .huddleContainer{
   background: white;
@@ -181,7 +177,8 @@ span {
 
 .welcomeTitle {
   text-align: center;
-  color: white;
+  /*color: rgb(194, 194, 109);*/
+  color: #FFFFF0;
   font-size: 50px;
   font-family: "MergeBlack", serif;
   margin-bottom: 20px;
@@ -204,7 +201,6 @@ span {
   box-sizing: border-box;
   padding: 10px;
   color: white;
-  /*color: white;*/
   font-family: "Montserrat", serif;
 }
 
@@ -214,36 +210,48 @@ span {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 1000px;
   justify-content: center;
+  /*text-align: justify;*/
   align-items: center;  /* THIS IS WHAT MAKES THE TEXT SIT INBETWEENN THE DIV*/
 }
 
 .welcomeBriefButton{
   /*grid-column: 1 / 2;*/
   display: flex;
-  /*justify-content: left;*/
+  /*justify-content: center;*/
   justify-content: flex-start;
   /*padding: 10px;*/
 }
 
 .learnMoreButton{
   font-family: "Montserrat", serif;
-  color: yellow;
+  /*color: rgb(194, 194, 109);*/
+  color: orange;
+  /*color: #FFFFF0;*/
   height: 40px;
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
+.learnMoreButton:hover{
+  color: #3ABEF9;
+}
+.learnMoreButton:active{
+  color: grey;
+}
+
 .learnMoreButton:after {
   content: '';
-  background: url("../public/rightArrow.png");
+  background: url("/rightArrow.png");
   background-size: cover;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  filter: brightness(0) saturate(100%) invert(54%) sepia(94%) saturate(2140%) hue-rotate(3deg) brightness(102%) contrast(101%);
+  height: 15px;
+  color: yellow;
   display: inline-block;
 }
 
@@ -288,11 +296,43 @@ span {
   color: #ccc;
 }
 
+.reviewsSection{
+  background-color: #16345a;
+  /*height: 40vh;*/
+  width: 100%;
+  /*border-top-left-radius: 50px;*/
+  /*border-bottom-right-radius: 50px;*/
+  overflow: hidden;
+}
+
+.reviewsTexts{
+  font-family: "Montserrat", serif;
+  /*font-size: 20px;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  color: #FFFFF0;
+  /*font-style: italic;*/
+  text-align: center;
+  padding: 0 60px 60px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review1,
+.review2,
+.review3{
+  padding-bottom: 50px;
+}
 
 
-
-
-
+.testimonials {
+  text-align: center;
+  /*color: rgb(194, 194, 109);*/
+  color: #FFFFF0;
+  font-size: 25px;
+  font-family: "MergeBlack", serif;
+  padding: 20px;
+}
 
 
 

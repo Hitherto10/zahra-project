@@ -1,20 +1,23 @@
 import React from "react";
+import huddleH from '/huddle.png';
 
 function HomePage() {
     return (
         <div>
+
+            {/* CONTAINER FOR THE HUDDLE LOGO*/}
             <div className="huddleContainer">
                 <div className="huddleTitle">
-                    <img src="../../public/huddle1.png" alt=""/>
+                    <img src={huddleH} alt=""/>
                     <span>UDDLE</span>
                 </div>
             </div>
 
+            {/* INTRODUCTORY TEXT WITH LINKS TO THE LEARN MORE SECTION*/}
             <div className="welcomeSection">
                 <div className="welcomeTitle">
                     <p>WELCOME TO OUR HOME</p>
                 </div>
-
                 <div className="welcomeBody">
                     <div className="welcomeBriefsContainer">
                         <div className="welcomeBriefsTexts">
@@ -49,225 +52,37 @@ function HomePage() {
                                 </div>
                             </div>
                         </div>
-
-
-                        {/* ⬇ MOVE THIS DIV INSIDE THE GRID */}
-                        {/*<div className="welcomeBriefButton">*/}
-                        {/*    <button className="learnMoreButton">*/}
-                        {/*        LEARN MORE*/}
-                        {/*    </button>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </div>
 
+            <div className="reviewsSection">
+                <div className="testimonials">
+                    <p>TESTIMONIALS</p>
+                </div>
+                <div className="reviewsTexts">
+
+                    <p className="review1">
+                        "The shelter feels like home. I like the people that are here, the food,
+                        and all the other things that are available to us."
+                    </p>
+                    <p className="review2">
+                        "This place means a lot to me. It wakes me up and gives me hope for the future.
+                        On a scale of 1-10, the people here are an 11."
+                    </p>
+                    <p className="review3">
+                        "The food, the staff, and the environment here are all excellent. Here,
+                        it's quiet and calm, and I always feel safe."
+                    </p>
+                    <p className="review4">
+                        "This pantry lets me have a proper diet. Food is so expensive,
+                        and without this place, I wouldn't be able to eat properly."
+                    </p>
+                </div>
+
+            </div>
 
-            {/* 👇 Add spacing so the content isn't hidden behind the fixed header */}
-            {/*<div style={{ paddingTop: "80px",  color: "white" }}>*/}
-            {/*    Some text some text some text some text..*/}
-            {/*    <br/>*/}
-            {/*    <br/>*/}
 
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-
-            {/*    Some text some text some text some text..*/}
-            {/*</div>*/}
         </div>
     );
 }

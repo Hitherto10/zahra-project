@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import MenuOverlay from './MenuOverlay';
+import menuIcon from '/menu.png';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,10 +26,7 @@ const Header = () => {
 
                     {/* Menu Toggle Button (visible on mobile) */}
                     <button className="menu_button" onClick={toggleMenu} aria-label="Toggle menu">
-                        <img
-                            src="../../public/menu.png"
-                            alt="menu icon"
-                        />
+                        <img src={menuIcon} alt="menu"/>
                     </button>
                 </div>
             </header>
