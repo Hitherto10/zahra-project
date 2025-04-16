@@ -1,5 +1,6 @@
 import React from "react";
 import huddleH from '/huddle.png';
+import testi1Image from '/lifeline.jpg';
 
 function HomePage() {
     return (
@@ -56,29 +57,28 @@ function HomePage() {
                 </div>
             </div>
 
-            <div className="reviewsSection">
-                <div className="testimonials">
+            <div className="testimonials">
+
+                <div className="testimonialsHeader">
                     <p>TESTIMONIALS</p>
                 </div>
-                <div className="reviewsTexts">
 
-                    <p className="review1">
-                        "The shelter feels like home. I like the people that are here, the food,
-                        and all the other things that are available to us."
-                    </p>
-                    <p className="review2">
-                        "This place means a lot to me. It wakes me up and gives me hope for the future.
-                        On a scale of 1-10, the people here are an 11."
-                    </p>
-                    <p className="review3">
-                        "The food, the staff, and the environment here are all excellent. Here,
-                        it's quiet and calm, and I always feel safe."
-                    </p>
-                    <p className="review4">
-                        "This pantry lets me have a proper diet. Food is so expensive,
-                        and without this place, I wouldn't be able to eat properly."
-                    </p>
+
+                <div className="testimonial1">
+
+                    <div className="testimonial1image">
+                        <img src={testi1Image} className="testimony-image-one" alt=""/>
+                    </div>
+
+                    <div className="testimonial1text">
+                        <div className="welcomeBriefs1">
+                            <p>
+                                "THIS WAS A LIFELINE IN A TOUGH TIME."
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
 

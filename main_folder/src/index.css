@@ -285,10 +285,10 @@ span {
 }
 
 .overlayNav a {
-  color: white;
   font-size: 24px;
   text-decoration: none;
   font-family: "CarosSoftHeavy", serif;
+  color: orange;
   transition: color 0.3s ease;
 }
 
@@ -296,42 +296,31 @@ span {
   color: #ccc;
 }
 
-.reviewsSection{
-  background-color: #16345a;
-  /*height: 40vh;*/
+.testimonials{
   width: 100%;
-  /*border-top-left-radius: 50px;*/
-  /*border-bottom-right-radius: 50px;*/
+  border: 2px solid orange;
   overflow: hidden;
 }
 
-.reviewsTexts{
-  font-family: "Montserrat", serif;
-  /*font-size: 20px;*/
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  color: #FFFFF0;
-  /*font-style: italic;*/
+.testimonialsHeader{
   text-align: center;
-  padding: 0 60px 60px;
-  justify-content: center;
-  gap: 10px;
-}
-
-.review1,
-.review2,
-.review3{
-  padding-bottom: 50px;
-}
-
-
-.testimonials {
-  text-align: center;
-  /*color: rgb(194, 194, 109);*/
   color: #FFFFF0;
   font-size: 25px;
   font-family: "MergeBlack", serif;
-  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 750px) {
+  .testimonial1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.testimony-image-one{
+  width: 500px;
 }
 
 
