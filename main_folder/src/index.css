@@ -167,8 +167,8 @@ span {
 }
 
 .huddleTitle img{
-  height: 70px;
-  width: 65px;
+  height: 90px;
+  width: 70px;
 }
 
 .welcomeSection {
@@ -219,21 +219,21 @@ span {
   display: flex;
   /*justify-content: center;*/
   justify-content: flex-start;
-  padding: 10px 10px 10px 0;
+  /*padding: 10px;*/
 }
 
 .learnMoreButton{
   font-family: "Montserrat", serif;
-  color: black;
-  height: 20px;
-  padding: 10px;
+  /*color: rgb(194, 194, 109);*/
+  color: orange;
+  /*color: #FFFFF0;*/
+  height: 40px;
   width: fit-content;
   display: flex;
   align-items: center;
   gap: 5px;
-  background: orange;
+  background: none;
   font-weight: bold;
-  border-radius: 5px;
   border: none;
   cursor: pointer;
 }
@@ -250,9 +250,8 @@ span {
   background: url("/rightArrow.png");
   background-size: cover;
   width: 15px;
-  /*filter: brightness(0) saturate(100%) invert(54%) sepia(94%) saturate(2140%) hue-rotate(3deg) brightness(102%) contrast(101%);*/
+  filter: brightness(0) saturate(100%) invert(54%) sepia(94%) saturate(2140%) hue-rotate(3deg) brightness(102%) contrast(101%);
   height: 15px;
-  filter: brightness(0) saturate(100%);
   color: yellow;
   display: inline-block;
 }
