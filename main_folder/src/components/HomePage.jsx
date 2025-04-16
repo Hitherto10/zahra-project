@@ -1,6 +1,8 @@
 import React from "react";
 import huddleH from '/huddle.png';
 import testi1Image from '/lifeline.jpg';
+import testi2Image from '/belonging.jpg';
+import testi3Image from '/background.webp';
 
 function HomePage() {
     return (
@@ -64,25 +66,47 @@ function HomePage() {
                 </div>
 
 
-                <div className="testimonial1">
-
-                    <div className="testimonial1image">
-                        <img src={testi1Image} className="testimony-image-one" alt=""/>
+                <div className="testimonial">
+                    <div className="testimonialImage">
+                        <img src={testi1Image} alt="testimonial one"/>
                     </div>
-
-                    <div className="testimonial1text">
-                        <div className="welcomeBriefs1">
-                            <p>
-                                "THIS WAS A LIFELINE IN A TOUGH TIME."
-                            </p>
-                        </div>
+                    <div className="testimonialText">
+                        <p>"THIS WAS A LIFELINE IN A TOUGH TIME."</p>
+                        <span> USER 234</span>
                     </div>
                 </div>
 
+                <div className="testimonial reverse">
+                    <div className="testimonialImage">
+                        <img src={testi2Image} alt="testimonial two"/>
+                    </div>
+                    <div className="testimonialText">
+                        <p>"I TRULY FELT A SENSE OF BELONGING"</p>
+                        <span> USER 655</span>
+                    </div>
+                </div>
+
+                <div className="testimonial">
+                    <div className="testimonialImage">
+                        <img src={testi3Image} alt="testimonial three"/>
+                    </div>
+                    <div className="testimonialText">
+                        <p>"IT OFFERED ME CRITICAL RESOURCES."</p>
+                        <span> USER 22</span>
+                    </div>
+                </div>
+
+                {/*<div className="testimonial reverse">*/}
+                {/*    <div className="testimonialImage">*/}
+                {/*        <img src={testi3Image} alt="testimonial four"/>*/}
+                {/*    </div>*/}
+                {/*    <div className="testimonialText">*/}
+                {/*        <p>"THEIR SUPPORT CHANGED MY LIFE."</p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
 
             </div>
-
-
         </div>
     );
 }
