@@ -34,7 +34,7 @@ const AuthTabs = () => {
                 {/*<a href="#">Forgot password?</a>*/}
             </div>
             <button className="submit-btn">SIGN IN</button>
-            <p className="auth-footer">Already a member? <a href="#">Sign in</a></p>
+            <p className="auth-footer">Already a member? <a href="#">Login</a></p>
         </form>
     );
 
