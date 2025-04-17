@@ -23,8 +23,12 @@ const AuthTabs = () => {
             {/*    <i className="fab fa-github"></i>*/}
             {/*</div>*/}
             {/*<p className="or-text">or:</p>*/}
-            <input type="text" placeholder="Email or username" />
-            <input type="password" placeholder="Password" />
+            <div className="userCredentials">
+                <input type="text" placeholder="First name" />
+                <input type="text" placeholder="Last Name" />
+            </div>
+
+            <input type="email" placeholder="Email" />
             <div className="form-options">
                 {/*<label><input type="checkbox" /> Remember me</label>*/}
                 {/*<a href="#">Forgot password?</a>*/}
@@ -45,17 +49,18 @@ const AuthTabs = () => {
             {/*</div>*/}
             {/*<p className="or-text">or:</p>*/}
             <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Username" />
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Repeat password" />
+            <textarea placeholder="Services Provided" />
             <label className="terms"><input type="checkbox" /> I have read and agree to the terms</label>
-            <button className="submit-btn">SIGN IN</button>
+            <button className="submit-btn">PROCEED</button>
         </form>
     );
 
     return (
         <div className="auth-container">
+            <div className="sign_charityHeader">
+                <p>JOIN THE COMMUNITY !</p>
+            </div>
             {!isLargeScreen && (
                 <div className="auth-tabs">
                     <button

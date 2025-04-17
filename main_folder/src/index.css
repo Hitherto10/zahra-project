@@ -364,8 +364,16 @@ span {
 
 .auth-container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 2rem;
+}
+
+.sign_charityHeader{
+  text-align: center;
+  color: #FFFFF0;
+  font-size: 35px;
+  font-family: "MergeBlack", serif;
+  margin-bottom: 20px;
 }
 
 .auth-tabs {
@@ -377,7 +385,7 @@ span {
 
 .tab {
   padding: 10px 20px;
-  border: none;
+  border: 1px solid #FFFFF0;
   background-color: #eee;
   cursor: pointer;
   font-size: 13px;
@@ -395,8 +403,8 @@ span {
 }
 
 .tab.active {
-  background-color: #dbe6ff;
-  color: #000;
+  background-color: #5c80bc;
+  color: white;
 }
 
 .auth-content {
@@ -430,6 +438,7 @@ span {
   font-family: "MergeBlack", serif;
   margin-bottom: 0.5rem;
   font-size: 30px;
+  color: orange;
 
 }
 
@@ -454,11 +463,13 @@ span {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+textarea {
   width: 100%;
   padding: 10px;
   margin: 0.5rem 0;
   border: 1px solid #ccc;
+  font-family: "Ciutadella", serif;
   border-radius: 4px;
 }
 
@@ -474,16 +485,20 @@ input[type="password"] {
   font-size: 0.9rem;
   margin: 1rem 0;
   display: block;
+  font-family: "Montserrat", serif;
 }
 
 .submit-btn {
   width: 100%;
-  background-color: #3f70e1;
+  /*background-color: #258ea6;*/
+  background-color: #5c80bc;
   color: white;
   padding: 10px;
   border: none;
+  font-family: "Ciutadella", serif;
   border-radius: 4px;
-  font-weight: bold;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+  /*font-weight: bold;*/
   cursor: pointer;
 }
 
@@ -491,12 +506,20 @@ input[type="password"] {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
+  font-family: "Montserrat", serif;
 }
 
 .auth-footer a {
   color: #3f70e1;
   text-decoration: none;
 }
+
+.userCredentials{
+  display: flex;
+  gap: 20px;
+}
+
+
 
 
 
