@@ -25,6 +25,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Ciutadella";
+  src: url("https://db.onlinewebfonts.com/t/d4b2e75e6fe635e6b5e2938691b50b26.eot");
+  src: url("https://db.onlinewebfonts.com/t/d4b2e75e6fe635e6b5e2938691b50b26.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/d4b2e75e6fe635e6b5e2938691b50b26.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/d4b2e75e6fe635e6b5e2938691b50b26.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/d4b2e75e6fe635e6b5e2938691b50b26.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/d4b2e75e6fe635e6b5e2938691b50b26.svg#Ciutadella")format("svg");
+}
+
 
 * {
   padding: 0;
@@ -324,7 +334,7 @@ span {
 .testimonial img {
   width: 100%;
   max-width: 500px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .testimonialText {
@@ -347,6 +357,145 @@ span {
   .testimonialText {
     margin-top: 15px;
   }
+}
+
+
+
+
+.auth-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  width: 30vw;
+  font-family: "Ciutadella", serif;
+  color: #333;
+}
+
+#formText-Charity,
+#formText-Login{
+
+}
+
+.tab.active {
+  background-color: #dbe6ff;
+  color: #000;
+}
+
+.auth-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+}
+
+.auth-content.dual-column {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.auth-form {
+  /*background-color: #;*/
+  /*border: 1px solid black;*/
+  padding: 1.5rem;
+  border-radius: 8px;
+  /*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
+  width: 100%;
+}
+
+.auth-content.dual-column .auth-form {
+  width: 48%;
+}
+
+.auth-title {
+  text-align: center;
+  /*font-weight: bold;*/
+  font-family: "MergeBlack", serif;
+  margin-bottom: 0.5rem;
+  font-size: 30px;
+
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #3f70e1;
+}
+
+.or-text {
+  text-align: center;
+  margin: 1rem 0;
+  color: #888;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.terms {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  display: block;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #3f70e1;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-footer a {
+  color: #3f70e1;
+  text-decoration: none;
 }
 
 

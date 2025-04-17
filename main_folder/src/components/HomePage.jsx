@@ -1,8 +1,6 @@
 import React from "react";
-import huddleH from '/huddle.png';
-import testi1Image from '/lifeline.jpg';
-import testi2Image from '/belonging.jpg';
-import testi3Image from '/background.webp';
+import { Images } from './Imports';
+import AuthTabs from "./AuthTabs.jsx";
 
 function HomePage() {
     return (
@@ -11,7 +9,7 @@ function HomePage() {
             {/* CONTAINER FOR THE HUDDLE LOGO*/}
             <div className="huddleContainer">
                 <div className="huddleTitle">
-                    <img src={huddleH} alt=""/>
+                    <img src={Images.huddleH} alt=""/>
                     <span>UDDLE</span>
                 </div>
             </div>
@@ -59,6 +57,7 @@ function HomePage() {
                 </div>
             </div>
 
+            {/* SECTION FOR TESTIMONIALS FROM USERS*/}
             <div className="testimonials">
 
                 <div className="testimonialsHeader">
@@ -68,7 +67,7 @@ function HomePage() {
 
                 <div className="testimonial">
                     <div className="testimonialImage">
-                        <img src={testi1Image} alt="testimonial one"/>
+                        <img src={Images.testimonial_one} alt="testimonial one"/>
                     </div>
                     <div className="testimonialText">
                         <p>"THIS WAS A LIFELINE IN A TOUGH TIME."</p>
@@ -78,7 +77,7 @@ function HomePage() {
 
                 <div className="testimonial reverse">
                     <div className="testimonialImage">
-                        <img src={testi2Image} alt="testimonial two"/>
+                        <img src={Images.testimonial_two} alt="testimonial two"/>
                     </div>
                     <div className="testimonialText">
                         <p>"I TRULY FELT A SENSE OF BELONGING"</p>
@@ -88,25 +87,21 @@ function HomePage() {
 
                 <div className="testimonial">
                     <div className="testimonialImage">
-                        <img src={testi3Image} alt="testimonial three"/>
+                        <img src={Images.testimonial_three} alt="testimonial three"/>
                     </div>
                     <div className="testimonialText">
                         <p>"IT OFFERED ME CRITICAL RESOURCES."</p>
                         <span> USER 22</span>
                     </div>
                 </div>
-
-                {/*<div className="testimonial reverse">*/}
-                {/*    <div className="testimonialImage">*/}
-                {/*        <img src={testi3Image} alt="testimonial four"/>*/}
-                {/*    </div>*/}
-                {/*    <div className="testimonialText">*/}
-                {/*        <p>"THEIR SUPPORT CHANGED MY LIFE."</p>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
-
             </div>
+
+            {/* LOGIN AND CHARITY SECTION*/}
+            <div className="login-charity">
+                <AuthTabs />
+            </div>
+
+
         </div>
     );
 }

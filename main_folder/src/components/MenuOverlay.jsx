@@ -1,13 +1,12 @@
 import React from 'react';
-import menuIcon from '/menu.png';
-
+import {Images} from "./Imports.jsx";
 
 const MenuOverlay = ({ isOpen, onClose }) => {
     return (
         <div className={`overlayMenu ${isOpen ? 'open' : ''}`}>
             {/* Close Button Inside Overlay */}
             <button className="menu_button overlayCloseButton" onClick={onClose} aria-label="Close menu">
-                <img src={menuIcon} alt="close menu icon" />
+                <img src={Images.menuIcon} alt="close menu icon" />
             </button>
 
             <nav className="overlayNav">
