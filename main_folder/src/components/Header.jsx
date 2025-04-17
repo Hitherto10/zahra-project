@@ -31,8 +31,8 @@ const Header = () => {
                 </div>
             </header>
 
-             {/*Fullscreen overlay menu for mobile */}
-            <MenuOverlay isOpen={menuOpen} onClose={toggleMenu} />
+            {/*Fullscreen overlay menu for mobile */}
+            <MenuOverlay isOpen={menuOpen} onClose={toggleMenu}/>
         </div>
     );
 };

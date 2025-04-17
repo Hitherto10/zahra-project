@@ -43,7 +43,8 @@
 }
 
 body {
-  background: #112540;
+  background: #020024;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(17, 37, 64, 1) 96%);
 }
 
 span {
@@ -85,7 +86,7 @@ span {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #112540;
+  background: rgba(17, 37, 64, 0.998);
   z-index: 1000;
 }
 
@@ -103,7 +104,7 @@ span {
   z-index: 5000;
   cursor: pointer;
   display: none;
-  padding-left: 15px;
+  /*padding-left: 15px;*/
 }
 
 .overlayCloseButton{
@@ -308,8 +309,7 @@ span {
 }
 
 .testimonials{
-  width: 70%;
-  /*border: 2px solid orange;*/
+  width: 80%;
   overflow: hidden;
   margin: auto;
 }
@@ -317,7 +317,7 @@ span {
 .testimonialsHeader{
   text-align: center;
   color: #FFFFF0;
-  font-size: 25px;
+  font-size: 35px;
   font-family: "MergeBlack", serif;
   margin-bottom: 20px;
 }
@@ -327,20 +327,35 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   padding: 30px 20px;
 }
+
+.testimonialText,
+.testimonialImage{
+  padding: 30px;
+}
+
 
 .testimonial img {
   width: 100%;
   max-width: 500px;
+  min-width: 360px;
   border-radius: 5px;
 }
 
 .testimonialText {
   max-width: 500px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   color: white;
+  line-height: 1.8;
+  font-size: 25px;
+}
+
+.testimonialText span{
+  font-size: 13px;
+  color: orange;
+
 }
 
 .testimonial.reverse {
@@ -352,6 +367,12 @@ span {
   .testimonial.reverse {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+  }
+
+  .testimonialText,
+  .testimonialImage{
+    padding: 0;
   }
 
   .testimonialText {
