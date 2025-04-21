@@ -88,7 +88,7 @@ span {
   top: 0;
   width: 100%;
   background: rgba(17, 37, 64, 0.998);
-  z-index: 1000;
+  z-index: 3;
 }
 
 .headingTitle {
@@ -99,27 +99,65 @@ span {
   font-weight: lighter;
 }
 
-.menu_button {
-  background: none;
-  border: none;
-  z-index: 5000;
-  cursor: pointer;
-  display: none;
-  /*padding-left: 15px;*/
-}
-
 .overlayCloseButton{
   top: 30px;
   position: fixed;
   right: 20px;
 }
 
-.menu_button img{
-  height: 30px;
-  margin-bottom: 5px;
-  /*filter: brightness(0) invert(1);*/
-  filter: brightness(0) saturate(100%) invert(54%) sepia(94%) saturate(2140%) hue-rotate(3deg) brightness(102%) contrast(101%);
+input#menu {
+  display: none;
+}
 
+.icon {
+  background: none;
+  cursor: pointer;
+  height: 24px;
+  padding: 16px;
+  width: 24px;
+  margin-bottom: 14px;
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after {
+  background: orange;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+  width: 20px;
+}
+
+.icon .menu {
+  right: 18px;
+}
+
+.icon .menu::before {
+  top: -6px;
+}
+
+.icon .menu::after {
+  top: 6px;
+}
+
+#menu:checked + .icon .menu {
+  background: transparent;
+}
+
+#menu:checked + .icon .menu::before {
+  transform: rotate(45deg);
+}
+
+#menu:checked + .icon .menu::after {
+  transform: rotate(-45deg);
+}
+
+#menu:checked + .icon .menu::before,
+#menu:checked + .icon .menu::after {
+  top: 0;
+  transition: top ease .3s, transform ease .3s .3s;
 }
 
 
@@ -240,19 +278,20 @@ span {
   /*color: rgb(194, 194, 109);*/
   color: orange;
   /*color: #FFFFF0;*/
-  height: 40px;
+  /*height: 30px;*/
   width: fit-content;
   display: flex;
   align-items: center;
   gap: 5px;
   background: none;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-size: 13px;
   border: none;
   cursor: pointer;
 }
 
 .learnMoreButton:hover{
-  color: #3ABEF9;
+  color: yellow;
 }
 .learnMoreButton:active{
   color: grey;
@@ -281,14 +320,19 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 2000;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .overlayMenu.open {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
+
 
 /* Centered nav links */
 .overlayNav {
@@ -351,7 +395,8 @@ span {
   font-family: "Poetsen One", sans-serif;
   color: white;
   line-height: 1.8;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .testimonialText span{
@@ -542,6 +587,8 @@ textarea {
   display: flex;
   gap: 20px;
 }
+
+
 
 
 

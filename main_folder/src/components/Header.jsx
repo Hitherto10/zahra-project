@@ -24,15 +24,15 @@ const Header = () => {
                         <a href="#contact">Contact Us</a>
                     </nav>
 
-                    {/* Menu Toggle Button (visible on mobile) */}
-                    <button className="menu_button" onClick={toggleMenu} aria-label="Toggle menu">
-                        <img src={Images.menuIcon} alt="menu"/>
-                    </button>
+                    <input type="checkbox" id="menu"/>
+                    <label htmlFor="menu" className="icon">
+                        <div className="menu" onClick={toggleMenu} aria-label="Toggle menu"></div>
+                    </label>
+
                 </div>
             </header>
 
-            {/*Fullscreen overlay menu for mobile */}
-            <MenuOverlay isOpen={menuOpen} onClose={toggleMenu}/>
+    <MenuOverlay isOpen={menuOpen} onClose={toggleMenu}/>
         </div>
     );
 };
