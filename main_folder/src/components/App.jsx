@@ -1,6 +1,7 @@
 import HomePage from "./HomePage.jsx";
 import React from "react";
 import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 
 function App(){
     return(
@@ -8,6 +9,7 @@ function App(){
             <div>
                 <Header />
                 <HomePage />
+                <Footer />
             </div>
         </React.StrictMode>
     );

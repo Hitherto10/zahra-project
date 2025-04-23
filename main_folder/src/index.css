@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -105,7 +110,8 @@ span {
   right: 20px;
 }
 
-input#menu {
+input#menu,
+.icon{
   display: none;
 }
 
@@ -160,10 +166,10 @@ input#menu {
   transition: top ease .3s, transform ease .3s .3s;
 }
 
-
  /*Mobile styles*/
 @media (max-width: 835px) {
-  .menu_button {
+  .menu,
+  .icon{
     display: block;
   }
 

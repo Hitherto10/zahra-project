@@ -98,9 +98,8 @@ function HomePage() {
 
             {/* LOGIN AND CHARITY SECTION*/}
             <div className="login-charity">
-                <AuthTabs />
+                <AuthTabs/>
             </div>
-
 
         </div>
     );
