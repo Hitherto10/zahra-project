@@ -3,6 +3,7 @@ import testimonial_one from '/lifeline.jpg';
 import testimonial_two from '/belonging.jpg';
 import testimonial_three from '/background.webp';
 import menuIcon from '/menu.png';
+import criticalResources from '/criticalResources.jpg';
 
 // Exporting as a named object
 export const Images = {
@@ -11,5 +12,6 @@ export const Images = {
     testimonial_two,
     testimonial_three,
     menuIcon,
+    criticalResources
 };
 

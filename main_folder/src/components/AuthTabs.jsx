@@ -24,15 +24,16 @@ const AuthTabs = () => {
             {/*</div>*/}
             {/*<p className="or-text">or:</p>*/}
             <div className="userCredentials">
-                <input type="text" placeholder="First name" />
-                <input type="text" placeholder="Last Name" />
+                <input type="text" placeholder="Username*" />
+                <input type="text" placeholder="Full Name*" />
             </div>
 
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email*" />
             <div className="form-options">
                 {/*<label><input type="checkbox" /> Remember me</label>*/}
                 {/*<a href="#">Forgot password?</a>*/}
             </div>
+            <label className="terms"><input type="checkbox" /> I have read and agree to the terms</label>
             <button className="submit-btn">SIGN IN</button>
             <p className="auth-footer">Already a member? <a href="#">Login</a></p>
         </form>

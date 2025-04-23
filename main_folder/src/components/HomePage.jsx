@@ -87,7 +87,7 @@ function HomePage() {
 
                 <div className="testimonial">
                     <div className="testimonialImage">
-                        <img src={Images.testimonial_three} alt="testimonial three"/>
+                        <img src={Images.criticalResources} alt="testimonial three"/>
                     </div>
                     <div className="testimonialText">
                         <p>"IT OFFERED ME CRITICAL RESOURCES."</p>
