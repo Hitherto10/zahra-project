@@ -104,24 +104,27 @@ span {
   font-weight: lighter;
 }
 
+
+.headingTitle:hover {
+  color: #ea9f00;
+}
+
+
 .overlayCloseButton{
   top: 30px;
   position: fixed;
   right: 20px;
 }
 
-input#menu,
-.icon{
-  display: none;
-}
-
 .icon {
   background: none;
+  display: none;
   cursor: pointer;
   height: 24px;
   padding: 16px;
   width: 24px;
   margin-bottom: 14px;
+  position: relative;
 }
 
 .icon .menu,
@@ -132,12 +135,13 @@ input#menu,
   display: block;
   height: 2px;
   position: absolute;
-  transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+  transition: all 0.3s ease;
   width: 20px;
 }
 
 .icon .menu {
-  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .icon .menu::before {
@@ -148,23 +152,20 @@ input#menu,
   top: 6px;
 }
 
-#menu:checked + .icon .menu {
+.menu.open {
   background: transparent;
 }
 
-#menu:checked + .icon .menu::before {
+.menu.open::before {
   transform: rotate(45deg);
-}
-
-#menu:checked + .icon .menu::after {
-  transform: rotate(-45deg);
-}
-
-#menu:checked + .icon .menu::before,
-#menu:checked + .icon .menu::after {
   top: 0;
-  transition: top ease .3s, transform ease .3s .3s;
 }
+
+.menu.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
 
  /*Mobile styles*/
 @media (max-width: 835px) {
@@ -172,6 +173,7 @@ input#menu,
   .icon{
     display: block;
   }
+
 
   .navLinks {
     display: none;

@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import MenuOverlay from './MenuOverlay';
 import {Images} from "./Imports.jsx";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,30 +10,35 @@ const Header = () => {
         setMenuOpen((prev) => !prev);
     }, []);
 
+    const closeMenu = useCallback(() => {
+        setMenuOpen(false);
+    }, []);
+
     return (
         <div>
             <header className="header">
                 <div className="navbar">
-                    <h1 className="headingTitle">HOME IS WHERE PEOPLE ARE</h1>
+                    <NavLink to="/" onClick={closeMenu}>
+                        <h1 className="headingTitle">HOME IS WHERE PEOPLE ARE</h1>
+                    </NavLink>
 
                     {/* Desktop Navigation */}
                     <nav className="navLinks">
-                        <a href="#community">Community</a>
-                        <a href="#charity">Charity</a>
-                        <a href="#support">Support</a>
-                        <a href="#donate">Donate</a>
-                        <a href="#contact">Contact Us</a>
+                        <NavLink to="/community">Community</NavLink>
+                        <NavLink to="/charity">Charity</NavLink>
+                        <NavLink to="/support">Support</NavLink>
+                        <NavLink to="/donate">Donate</NavLink>
+                        <NavLink to="/contact">Contact Us</NavLink>
                     </nav>
 
-                    <input type="checkbox" id="menu"/>
-                    <label htmlFor="menu" className="icon">
-                        <div className="menu" onClick={toggleMenu} aria-label="Toggle menu"></div>
-                    </label>
+                    <div className="icon" onClick={toggleMenu}>
+                        <div className={`menu ${menuOpen ? 'open' : ''}`} aria-label="Toggle menu"></div>
+                    </div>
 
                 </div>
             </header>
 
-    <MenuOverlay isOpen={menuOpen} onClose={toggleMenu}/>
+            <MenuOverlay isOpen={menuOpen} onClose={toggleMenu} />
         </div>
     );
 };
