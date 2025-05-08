@@ -70,7 +70,7 @@ function HomePage() {
                         <img src={Images.testimonial_one} alt="testimonial one"/>
                     </div>
                     <div className="testimonialText">
-                        <p>"THIS WAS A LIFELINE IN A TOUGH TIME."</p>
+                        <p>"This was a lifeline in a tough time."</p>
                         <span> USER 234</span>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ function HomePage() {
                         <img src={Images.testimonial_two} alt="testimonial two"/>
                     </div>
                     <div className="testimonialText">
-                        <p>"I TRULY FELT A SENSE OF BELONGING"</p>
+                        <p>"I truly felt a sense of belonging"</p>
                         <span> USER 655</span>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ function HomePage() {
                         <img src={Images.criticalResources} alt="testimonial three"/>
                     </div>
                     <div className="testimonialText">
-                        <p>"IT OFFERED ME CRITICAL RESOURCES."</p>
+                        <p>"It offered me critical resources."</p>
                         <span> USER 22</span>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import MenuOverlay from './MenuOverlay';
 import {Images} from "./Imports.jsx";
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +14,15 @@ const Header = () => {
         setMenuOpen(false);
     }, []);
 
+    const [isSearchOverlayOpen, setIsSearchOverlayOpen] = useState(false);
+
+    const openSearchOverlay = () => setIsSearchOverlayOpen(true);
+    const closeSearchOverlay = () => setIsSearchOverlayOpen(false);
+
+
+    const location = useLocation();
+    const isCommunityPage = location.pathname === '/community';
+
     return (
         <div>
             <header className="header">
@@ -23,13 +32,31 @@ const Header = () => {
                     </NavLink>
 
                     {/* Desktop Navigation */}
-                    <nav className="navLinks">
+                    <nav className="navLinks" id="navLinks">
                         <NavLink to="/community">Community</NavLink>
                         <NavLink to="/charity">Charity</NavLink>
                         <NavLink to="/support">Support</NavLink>
                         <NavLink to="/donate">Donate</NavLink>
                         <NavLink to="/contact">Contact Us</NavLink>
                     </nav>
+
+                    {isCommunityPage && (
+                        <div className="search-container">
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className="community-search"
+                            />
+                            <button className="search-icon" onClick={openSearchOverlay}>
+                                {/*🔍*/}
+                                <img
+                                    src={Images.search}
+                                    alt="Poeple Visual"
+                                />
+                            </button>
+                        </div>
+                    )}
+
 
                     <div className="icon" onClick={toggleMenu}>
                         <div className={`menu ${menuOpen ? 'open' : ''}`} aria-label="Toggle menu"></div>
@@ -39,6 +66,18 @@ const Header = () => {
             </header>
 
             <MenuOverlay isOpen={menuOpen} onClose={toggleMenu} />
+            {isSearchOverlayOpen && (
+                <div className="search-overlay">
+                    <input
+                        type="text"
+                        className="search-overlay-input"
+                        placeholder="Type to search..."
+                        autoFocus
+                    />
+                    <button className="close-overlay" onClick={closeSearchOverlay}>✖</button>
+                </div>
+            )}
+
         </div>
     );
 };
